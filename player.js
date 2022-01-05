@@ -11,16 +11,15 @@ class Player {
         ctx.clearRect(this.x, this.y, this.width, this.height);
         ctx.beginPath();
         ctx.fillStyle = this.color;
-        const image = new Image();
-        image.src = "https://cdn.pixabay.com/photo/2015/12/26/08/20/brick-wall-1108405__340.jpg";
-        // image.onload = () => {
-            ctx.drawImage(image, this.x, this.y, this.width, this.height);
-        // }
+        ctx.fillRect(this.x, this.y, this.width, this.height);
+        // const image = new Image();
+        // image.src = "https://cdn.pixabay.com/photo/2015/12/26/08/20/brick-wall-1108405__340.jpg";
+        // ctx.drawImage(image, this.x, this.y, this.width, this.height);
     };
 
-    move() {
-        this.y -= 10;
-        // this.draw();
+    move(dir) {
+        if (dir == 1) this.x -= 30;
+        else this.x += 30;
     }
 }
 

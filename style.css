@@ -9,11 +9,21 @@ body {
 }
 
 #canvas {
-    position: absolute;
-    top: 0;
-    left: 25%;
     border: 3px solid;
     background: url("https://cdn.pixabay.com/photo/2017/02/15/11/05/texture-2068283__340.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#gameOption, #gameOver, #win {
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    text-align: center;
+}
+
+#gameOver, #win {
+    display: none;
 }
 
 #info {
@@ -24,8 +34,9 @@ body {
     align-items: center;
     position: absolute;
     top: 0;
-    left: 35%;
+    margin: auto;
     z-index: 2;
+    width: 100%;
 }
 
 li {
